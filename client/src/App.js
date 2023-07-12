@@ -24,12 +24,18 @@ import React, { useEffect, useState } from "react";
 //     margin: theme.spacing(1),
 //   },
 // }));
+// interface Question {
+//   id: number;
+//   message: string;
+//   oui: number;
+//   non: number;
+// }
 
 const App = () => {
   // const classes = useStyles();
   const [currentQuestion, setCurrentQuestion] = useState(null);
+     useState < Question > { id: 0, message: "", oui: 0, non: 0; };
   const [selectedQuestion, setSelectedQuestion] = useState(1);
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
