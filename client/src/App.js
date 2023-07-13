@@ -1,35 +1,21 @@
+import React, { useEffect, useState } from "react";
 import {
-  Breadcrumbs,
-  Button,
   CircularProgress,
   Paper,
   Typography,
+  Breadcrumbs,
   Link,
+  Collapse,
+  Button
 } from "@mui/material";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-
-// const useStyles = makeStyles((theme) => ({
-//   container: {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     height: '100vh',
-//   },
-//   question: {
-//     marginBottom: theme.spacing(2),
-//   },
-//   button: {
-//     margin: theme.spacing(1),
-//   },
-// }));
+import { ArrowBack } from "@mui/icons-material";
+import "./App.css";
 
 const App = () => {
-  // const classes = useStyles();
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [selectedQuestion, setSelectedQuestion] = useState(1);
-
+  const [questionHistory, setQuestionHistory] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -37,10 +23,10 @@ const App = () => {
     fetchQuestion({ id: selectedQuestion })
       .then((data) => {
         setCurrentQuestion(data);
-        console.log(data);
+        console.log("Question obtenue :", data);
       })
       .catch((error) => {
-        console.log("Error al obtener la pregunta:", error);
+        console.log("Erreur lors de la récupération de la question :", error);
       })
       .finally(() => setLoading(false));
   }, [selectedQuestion]);
@@ -57,46 +43,66 @@ const App = () => {
     }
   };
 
+  const handleNavigation = (questionId) => {
+    setQuestionHistory([...questionHistory, selectedQuestion]);
+    setSelectedQuestion(questionId);
+  };
+
+  const handleGoBack = () => {
+    if (questionHistory.length > 0) {
+      const previousQuestion = questionHistory.pop();
+      setQuestionHistory([...questionHistory]);
+      setSelectedQuestion(previousQuestion);
+    }
+  };
+
   return (
-    <div>
+    <div className="container">
       {loading ? (
         <CircularProgress />
       ) : currentQuestion ? (
-        <Paper>
-          <Breadcrumbs maxItems={2} aria-label="breadcrumb">
-            <Link underline="hover" color="inherit" href="#">
-              Home
+        <Paper className="paper">
+          <Collapse in={questionHistory.length > 0}>
+            <Link
+              underline="hover"
+              color="inherit"
+              onClick={handleGoBack}
+              style={{ cursor: "pointer" }}
+            >
+              <ArrowBack />
             </Link>
-            <Link underline="hover" color="inherit" href="#">
-              Catalog
-            </Link>
-            <Link underline="hover" color="inherit" href="#">
-              Accessories
-            </Link>
-            <Link underline="hover" color="inherit" href="#">
-              New Collection
-            </Link>
-            <Typography color="text.primary">Belts</Typography>
+          </Collapse>
+          <Breadcrumbs maxItems={2}>
+            {questionHistory.map((questionId, index) => (
+              <Link
+                key={index}
+                underline="hover"
+                color="inherit"
+                onClick={() => setSelectedQuestion(questionId)}
+              >
+                Pregunta {questionId}
+              </Link>
+            ))}
           </Breadcrumbs>
-          <Typography variant="h6">Pregunta {currentQuestion.id}</Typography>
+          <Typography variant="h6">Question {currentQuestion.id}</Typography>
           <Typography variant="body1">{currentQuestion.message}</Typography>
           <Button
             variant="contained"
             color="primary"
-            onClick={() => setSelectedQuestion(currentQuestion.oui)}
+            onClick={() => handleNavigation(currentQuestion.oui)}
           >
             Oui
           </Button>
           <Button
             variant="contained"
             color="secondary"
-            onClick={() => setSelectedQuestion(currentQuestion.non)}
+            onClick={() => handleNavigation(currentQuestion.non)}
           >
             Non
           </Button>
         </Paper>
       ) : (
-        <Typography variant="body1">No hay pregunta seleccionada</Typography>
+        <Typography variant="body1">Aucune question sélectionnée</Typography>
       )}
     </div>
   );
