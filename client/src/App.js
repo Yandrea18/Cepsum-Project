@@ -6,10 +6,10 @@ import {
   Breadcrumbs,
   Link,
   Collapse,
-  Button
+  Button,
 } from "@mui/material";
 import axios from "axios";
-import { ArrowBack } from "@mui/icons-material";
+import { ArrowBack, Email } from "@mui/icons-material";
 import "./App.css";
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
   const [selectedQuestion, setSelectedQuestion] = useState(1);
   const [questionHistory, setQuestionHistory] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [answeredQuestions, setAnsweredQuestions] = useState([]);
 
   useEffect(() => {
     setLoading(true);
@@ -43,7 +44,13 @@ const App = () => {
     }
   };
 
-  const handleNavigation = (questionId) => {
+  const handleNavigation = (questionId, answer) => {
+    const answeredQuestion = {
+      questionTitre: currentQuestion.titre,
+      questionMessage: currentQuestion.message,
+      answer: answer,
+    };
+    setAnsweredQuestions([...answeredQuestions, answeredQuestion]);
     setQuestionHistory([...questionHistory, selectedQuestion]);
     setSelectedQuestion(questionId);
   };
@@ -54,6 +61,10 @@ const App = () => {
       setQuestionHistory([...questionHistory]);
       setSelectedQuestion(previousQuestion);
     }
+  };
+
+  const handleSendEmail = () => {
+    console.log("Enviar correo");
   };
 
   return (
@@ -80,26 +91,62 @@ const App = () => {
                 color="inherit"
                 onClick={() => setSelectedQuestion(questionId)}
               >
-                Pregunta {questionId}
+                <span className="blue-title">
+                  {answeredQuestions[index].questionTitre}
+                </span>
               </Link>
             ))}
           </Breadcrumbs>
-          <Typography variant="h6">Question {currentQuestion.id}</Typography>
+          <Typography
+            variant="h5"
+            style={{ color: "#0077b6", fontWeight: "bold" }}
+          >
+            {currentQuestion.titre}
+          </Typography>
           <Typography variant="body1">{currentQuestion.message}</Typography>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => handleNavigation(currentQuestion.oui)}
-          >
-            Oui
-          </Button>
-          <Button
-            variant="contained"
-            color="secondary"
-            onClick={() => handleNavigation(currentQuestion.non)}
-          >
-            Non
-          </Button>
+          {currentQuestion.titre !== "Solution" && (
+            <div className="button-container">
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => handleNavigation(currentQuestion.oui, "oui")}
+              >
+                Oui
+              </Button>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={() => handleNavigation(currentQuestion.non, "non")}
+              >
+                Non
+              </Button>
+            </div>
+          )}
+          {currentQuestion.message.includes("Envoi courriel") && (
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleSendEmail}
+              startIcon={<Email />}
+            >
+              Envoi courriel
+            </Button>
+          )}
+          {currentQuestion.titre === "Solution" && (
+            <>
+              <Typography
+                variant="h6"
+                style={{ color: "#0077b6", fontWeight: "bold" }}
+              >
+                Questions Répondues:
+              </Typography>
+              {answeredQuestions.map((answeredQuestion, index) => (
+                <Typography  key={index} variant="body2">
+                  {answeredQuestion.questionMessage}: {answeredQuestion.answer}
+                </Typography>
+              ))}
+            </>
+          )}
         </Paper>
       ) : (
         <Typography variant="body1">Aucune question sélectionnée</Typography>
