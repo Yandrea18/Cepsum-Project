@@ -1,25 +1,26 @@
-const fs = require("fs");
-const csv = require("csv-parser");
-const path = require("path");
+const fs = require('fs');
+const csv = require('csv-parser');
+const path = require('path');
 
-const csvFilePath = path.join(__dirname, "../preguntas.csv");
+const csvFilePath = path.join(__dirname, '../preguntas.csv');
 
 let questions = {};
 
 fs.createReadStream(csvFilePath)
   .pipe(csv())
-  .on("data", (row) => {
-    const { id, titre, message, oui, non } = row;
+  .on('data', (row) => {
+    const { id, titre, image, message, oui, non } = row;
     questions[id] = {
       id: parseInt(id),
       message,
       titre,
+      image,
       oui: parseInt(oui),
       non: parseInt(non),
     };
   })
-  .on("end", () => {
-    console.log("Archivo CSV leído correctamente");
+  .on('end', () => {
+    console.log('Archivo CSV leído correctamente');
   });
 
 exports.fetchQuestion = function (req, res) {
@@ -32,9 +33,9 @@ exports.fetchQuestion = function (req, res) {
   } else {
     response = {
       id: -1,
-      message: "id no encontradooooo",
+      message: 'id no encontradooooo',
     };
-    console.log("id no encontrado");
+    console.log('id no encontrado');
   }
 
   res.json(response);
