@@ -36,6 +36,12 @@
     transform: rotate(360deg);
   }
 }
+@font-face {
+  font-family: 'Prohibition';
+  src: url("../public/fonts/ProhibitionTest-Round.otf") format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -44,14 +50,60 @@
 }
 
 .paper {
+  width: 70%;
+  height: 60%;
   padding: 2rem;
-  border: 2px solid #ccc;
-  border-radius: 8px;
   text-align: center;
+  overflow: auto;
+  position: relative;
+  border: 100px solid #0f192c;
 }
-.button-container {
+
+.logo-container {
+  margin-left: 10px;
   margin-top: 10px;
+  width: 100%;
+  max-width: 250px;
+}
+
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-height: 100px;
+}
+
+
+.content-container {
+  margin-top: 70px; 
+}
+
+.button-container {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.blue-title {
+  color: #0060ac;
+  font-weight: bold;
+}
+
+.arrow-back {
+  align-items: flex-start;
+  margin-left: 30px;
+}
+
+.custom-button {
+  background-color: #798093;
+  color: #ffffff;
+}
+
