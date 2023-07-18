@@ -1,25 +1,16 @@
 import React from "react";
-import { Grid, Paper, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import "./Accueil.css";
 
 const Accueil = ({ onDiagnostic }) => {
   return (
     <div>
-      <h1
-        style={{
-          fontFamily: "Prohibition",
-          color: "white",
-          textAlign: "center",
-        }}
-      >
-        Application de diagnostic
-      </h1>
+      <h1 className="h1">Application de diagnostic</h1>
       <div className="accueil-container">
         <Grid container spacing={3}>
           <Grid item xs={6} sm={6}>
-            <Paper
-              elevation={3}
-              className="accueil-paper"
+            <div
+              className="accueil-custom-component"
               onClick={() => onDiagnostic()}
             >
               <img
@@ -28,10 +19,10 @@ const Accueil = ({ onDiagnostic }) => {
                 className="accueil-image"
               />
               <Typography variant="h6">Problèmes d'accès</Typography>
-            </Paper>
+            </div>
           </Grid>
           <Grid item xs={6} sm={6}>
-            <Paper elevation={3} className="accueil-paper">
+            <div className="accueil-custom-component">
               <img
                 src="/images/logiciel.png"
                 alt="Accessibilité"
@@ -40,10 +31,10 @@ const Accueil = ({ onDiagnostic }) => {
               <Typography variant="h6">
                 Accessibilité et/ou erreurs de fonctionnement du logiciel
               </Typography>
-            </Paper>
+            </div>
           </Grid>
           <Grid item xs={6} sm={6}>
-            <Paper elevation={3} className="accueil-paper">
+            <div className="accueil-custom-component">
               <img
                 src="/images/boutons1.png"
                 alt="Boutons de portes"
@@ -52,17 +43,17 @@ const Accueil = ({ onDiagnostic }) => {
               <Typography variant="h6">
                 Fonctionnement des boutons d'ouverture des portes
               </Typography>
-            </Paper>
+            </div>
           </Grid>
           <Grid item xs={6} sm={6}>
-            <Paper elevation={3} className="accueil-paper">
+            <div className="accueil-custom-component">
               <img
                 src="/images/autotest.png"
                 alt="Autodiagnostic"
                 className="accueil-image"
               />
               <Typography variant="h6">Outil d'auto-diagnostic</Typography>
-            </Paper>
+            </div>
           </Grid>
         </Grid>
       </div>

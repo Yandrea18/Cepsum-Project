@@ -133,7 +133,7 @@ const Diagnostic = ({ onDiagnostic }) => {
             variant="h4"
             style={{
               fontWeight: "bold",
-              backgroundColor: "#0060ac",
+              backgroundColor: "#0f192c",
               padding: "10px",
               color: "#ffffff",
               fontFamily: "Prohibition",
@@ -150,26 +150,26 @@ const Diagnostic = ({ onDiagnostic }) => {
             {currentQuestion.message}
           </Typography>
           {currentQuestion.image && (
-            <img src={`/images/${currentQuestion.image}`} alt="img" />
+            <img
+              src={`/images/${currentQuestion.image}`}
+              alt="img"
+              className="question-image"
+            />
           )}
           {currentQuestion.titre !== "Diagnostic" && (
             <div className="button-container">
-              <Button
-                variant="contained"
-                color="primary"
+              <button
+                className="custom-button"
                 onClick={() => handleNavigation(currentQuestion.oui, "oui")}
-                style={{ backgroundColor: "#798093", color: "#ffffff" }}
               >
                 Oui
-              </Button>
-              <Button
-                variant="contained"
-                color="secondary"
+              </button>
+              <button
+                className="custom-button"
                 onClick={() => handleNavigation(currentQuestion.non, "non")}
-                style={{ backgroundColor: "#798093", color: "#ffffff" }}
               >
                 Non
-              </Button>
+              </button>
             </div>
           )}
           {currentQuestion.message.includes("Envoi courriel") && (

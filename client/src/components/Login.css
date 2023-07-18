@@ -1,5 +1,24 @@
+body {
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/images/torniquetes.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8; /* Ajusta el valor de opacidad según lo necesites */
+  filter: brightness(0.6); /* Ajusta el valor de brillo según lo necesites */
+  z-index: -1;
+}
+
 .login-container {
-  background-image: linear-gradient(to bottom right, #0f192c, #0060ac);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,27 +26,28 @@
   align-items: center;
 }
 
-.logo-container {
-  /* margin-bottom: 300px; */
+.login-form {
+  background-color:#ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
 }
 
 .logoC {
-  width: 150px; /* Ajusta el tamaño del logo según tus necesidades */
+  width: 200px;
   height: auto;
 }
+
 .line {
   height: 2px;
   background-color: #798093;
-  margin: 20px 0; /* Ajusta el margen superior e inferior según tus necesidades */
-}
-.login-form {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 5px;
+  margin: 10px 0;
 }
 
 .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 label {
@@ -39,14 +59,17 @@ label {
 .checkbox-group {
   display: flex;
   align-items: center;
+  
 }
 
 input[type="text"],
 input[type="password"] {
-  width: 100%;
-  padding: 5px;
+  width: 95%;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  
 }
 
 input[type="checkbox"] {
@@ -57,8 +80,20 @@ input[type="checkbox"] {
   background-color: #798093;
   color: #ffffff;
   border: none;
-  padding: 8px 16px;
-  border-radius: 3px;
+  padding: 12px 20px;
+  border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: #506579;
+}
+.h2 {
+  font-family: "Prohibition";
+   font-size: 50px;
+   text-align: center;
+  
 }

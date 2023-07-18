@@ -1,4 +1,7 @@
-.App {
-  text-align: center;
+body {
+  background-image: url("../../public/images/torniquetes.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7; /* Ajusta el valor de opacidad según lo necesites */
 }
-

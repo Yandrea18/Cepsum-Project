@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import "./Login.css";
 
-const Login =({ onLogin })=>{
-//function Login({ onLogin }) {
+const Login = ({ onLogin }) => {
+  //function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleLogin = () => {
-    onLogin(); 
+    onLogin();
   };
 
   return (
     <div className="login-container">
       <div className="login-form">
         <img src="/images/LogoCepsum.jpg" alt="Logo" className="logoC" />
-        <h2>Connexion</h2>
+        <h1 className="h2">Connexion</h1>
         <div className="line"></div>
 
         <div className="form-group">
@@ -64,6 +64,6 @@ const Login =({ onLogin })=>{
       </div>
     </div>
   );
-}
+};
 
 export default Login;

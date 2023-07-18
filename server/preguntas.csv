@@ -1,7 +1,7 @@
 id,titre,image,message,oui,non
-1,Titre 1,,Est-ce que la porte ouvre lorsque le client scan son code-à-barre ?,2,12
-2,Titre 2,guitare.jpeg,Est-ce que le passage est affiché sur le logiciel ?,3,10
-3,Titre 3,guitare.jpeg,Est-ce que le passage autorisé sur le logiciel,4,5
+1,Titre 1,tourniquets.png,Est-ce que la porte ouvre lorsque le client scan son code-à-barre ?,2,12
+2,Titre 2,logiciel.png,Est-ce que le passage est affiché sur le logiciel ?,3,10
+3,Titre 3,logiciel.png,Est-ce que le passage autorisé sur le logiciel,4,5
 4,Titre 4,,Est-ce que les informations du système de contrôle d’accès correspondent aux informations de COBA ?,39,40
 5,Titre 5,,Est-ce que le refus d'accès est concernant un identifiant ?,6,9
 6,Titre 6,,Est-ce que le code-à-barres de la carte de l'étudiant est le même que dans COBA ?,7,8
