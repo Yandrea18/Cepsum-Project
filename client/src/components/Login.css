@@ -13,8 +13,8 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  opacity: 0.8; /* Ajusta el valor de opacidad según lo necesites */
-  filter: brightness(0.6); /* Ajusta el valor de brillo según lo necesites */
+  opacity: 0.8; 
+  filter: brightness(0.6); 
   z-index: -1;
 }
 

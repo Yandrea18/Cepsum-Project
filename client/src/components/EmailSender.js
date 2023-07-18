@@ -122,9 +122,9 @@ const EmailSender = ({ currentQuestion, questionHistory, onSendEmail }) => {
               margin="normal"
             />
             <DialogActions>
-              <Button onClick={handleClose}>Cancelar</Button>
+              <Button onClick={handleClose}>Annuler</Button>
               <Button type="submit" variant="contained" color="primary">
-                Enviar
+                Envoyer
               </Button>
             </DialogActions>
           </form>
