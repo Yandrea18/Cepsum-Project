@@ -2,10 +2,8 @@ import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import HomeIcon from "@mui/icons-material/Home";
 import {
   Breadcrumbs,
-  Button,
   CircularProgress,
   Collapse,
-  Icon,
   Link,
   Paper,
   Typography,
@@ -13,13 +11,13 @@ import {
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./Diagnostic.css";
-import EmailSender from "../components/EmailSender";
+import EmailSender from "./EmailSender";
 
-const Diagnostic = ({ onDiagnostic }) => {
+const Boutons = ({ onBoutons }) => {
   // État pour gérer la question actuelle
   const [currentQuestion, setCurrentQuestion] = useState(null);
   // État pour stocker l'ID de la question sélectionnée
-  const [selectedQuestion, setSelectedQuestion] = useState(1);
+  const [selectedQuestion, setSelectedQuestion] = useState(78);
   // État pour stocker l'historique des questions
   const [questionHistory, setQuestionHistory] = useState([]);
   // État pour gérer le chargement
@@ -79,7 +77,7 @@ const Diagnostic = ({ onDiagnostic }) => {
     setOpenEmailForm(true);
     console.log("Envoyer un e-mail");
     // Valider que l'e-mail a été envoyé avec succès
-    onDiagnostic();
+    onBoutons();
   };
 
   return (
@@ -102,7 +100,7 @@ const Diagnostic = ({ onDiagnostic }) => {
               <HomeIcon
                 fontSize="large"
                 style={{ color: "#0060AC", cursor: "pointer" }}
-                onClick={onDiagnostic}
+                onClick={onBoutons}
               />
             </div>
           </div>
@@ -181,7 +179,7 @@ const Diagnostic = ({ onDiagnostic }) => {
               </button>
             </div>
           )}
-          {currentQuestion.message.includes("Envoi courriel") && (
+          {currentQuestion.message.includes("courriel") && (
             <EmailSender
               currentQuestion={currentQuestion}
               questionHistory={questionHistory}
@@ -211,4 +209,4 @@ const Diagnostic = ({ onDiagnostic }) => {
   );
 };
 
-export default Diagnostic;
+export default Boutons;

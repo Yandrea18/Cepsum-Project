@@ -1,14 +1,15 @@
-const fs = require('fs');
-const csv = require('csv-parser');
-const path = require('path');
+const fs = require("fs");
+const csv = require("csv-parser");
+const path = require("path");
 
-const csvFilePath = path.join(__dirname, '../preguntas.csv');
+const csvFilePath = path.join(__dirname, "../preguntas.csv");
 
 let questions = {};
 
+// Lire le fichier CSV et remplir l'objet questions avec les données
 fs.createReadStream(csvFilePath)
   .pipe(csv())
-  .on('data', (row) => {
+  .on("data", (row) => {
     const { id, titre, image, message, oui, non } = row;
     questions[id] = {
       id: parseInt(id),
@@ -19,10 +20,11 @@ fs.createReadStream(csvFilePath)
       non: parseInt(non),
     };
   })
-  .on('end', () => {
-    console.log('Archivo CSV leído correctamente');
+  .on("end", () => {
+    console.log("Fichier CSV lu avec succès");
   });
 
+// Exporter une fonction pour récupérer une question en fonction de son ID
 exports.fetchQuestion = function (req, res) {
   console.log(req.body.id);
   const id = req.body.id;
@@ -33,9 +35,9 @@ exports.fetchQuestion = function (req, res) {
   } else {
     response = {
       id: -1,
-      message: 'id no encontradooooo',
+      message: "ID non trouvé",
     };
-    console.log('id no encontrado');
+    console.log("ID non trouvé");
   }
 
   res.json(response);

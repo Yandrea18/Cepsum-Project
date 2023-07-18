@@ -1,78 +1,121 @@
 id,titre,image,message,oui,non
-1,Titre 1,tourniquets.png,Est-ce que la porte ouvre lorsque le client scan son code-à-barre ?,2,12
-2,Titre 2,logiciel.png,Est-ce que le passage est affiché sur le logiciel ?,3,10
-3,Titre 3,logiciel.png,Est-ce que le passage autorisé sur le logiciel,4,5
-4,Titre 4,,Est-ce que les informations du système de contrôle d’accès correspondent aux informations de COBA ?,39,40
-5,Titre 5,,Est-ce que le refus d'accès est concernant un identifiant ?,6,9
-6,Titre 6,,Est-ce que le code-à-barres de la carte de l'étudiant est le même que dans COBA ?,7,8
-7,Titre 7,,Est-ce que les informations du système de contrôle d’accès correspondent aux informations de COBA ?,41,42
-8,Titre 8,,Est-ce que le client est membre du Cepsum ?,43,44
-9,Titre 9,,Est-ce que les informations du système de contrôle d’accès correspondent aux informations de COBA ?,45,46
-10,Titre 10,,Est-ce que les passages des autres clients s'affichent sur le logiciel?,11,47
-11,Titre 11,,Est-ce que les autres portes réagissent correctement au comportement du logiciel ?,48,49
-12,Titre 12,,Est-ce que les autres portes des tourniquets ouvrent?,13,36
-13,Titre 13,,Est-ce que le passage du client est affiché sur le logiciel ?,14,26
-14,Titre 14,,Est-ce que le passage est autorisé sur le logiciel ?,15,17
-15,Titre 15,,Est-ce que la porte ouvre après avoir cliqué sur le bouton d’ouverture manuelle au comptoir ?,50,16
-16,Titre 16,,Est-ce que le portillon de côté ouvre après avoir cliqué sur le bouton d’ouverture manuelle au comptoir ?,51,52
-17,Titre 17,,Est-ce que le refus d'accès est concernant un identifiant ?,18,21
-18,Titre 18,,Est-ce que le code-à-barres de la carte de l'étudiant est le même que dans COBA ?,19,20
-19,Titre 19,,Est-ce que les informations du système de contrôle d’accès correspondent aux informations de COBA ?,53,54
-20,Titre 20,,Est-ce que le client est membre du Cepsum ?,55,56
-21,Titre 21,,Est-ce que le refus d'accès est causé par une restriction dans le dossier ?,22,23
-22,Titre 22,,Est-ce que la restriction d'accès est aussi active dans COBA ?,57,58
-23,Titre 23,,Est-ce que le refus d'accès est causé par le manque d'une activité et/ou abonnement en cours dans son dossier ?,24,25
-24,Titre 24,,Est-ce que la personne a un abonnement et/ou une activité valide dans COBA?,59,60
-25,Titre 25,,Est-ce que la raison du refus dans le système de contrôle d'accès est valide ?,61,62
-26,Titre 26,,Est-ce que le code-à-barre est lu par le lecteur sur le comptoir et affiché sur le logiciel ?,27,63
-27,Titre 27,,Est-ce que le lecteur émet un son lorsqu’un code-à-barre est lu ?,28,32
-28,Titre 28,,Est-ce que la lumière du lecteur est allumée ?,64,29
-29,Titre 29,,Est-ce que les lumières des autres lecteurs sont allumées ?,65,30
-30,Titre 30,,Ouvrir le tourniquet. Est-ce que l’écran qui montre qu’il y a 5 volts s’affiche ?,66,31
-31,Titre 31,,Est-ce que les lumières sont fonctionnelles lorsque l’extendeur 1 est changé et le Raspberry PI redemarré ?,67,68
-32,Titre 32,,Est-ce que la lumière du lecteur est allumée ?,69,33
-33,Titre 33,,Est-ce que les lumières des autres lecteurs sont allumées ?,70,34
-34,Titre 34,Ouvrir le tourniquet. ,Est-ce que l’écran qui montre qu’il y a 5 volts s’affiche ?,71,35
-35,Titre 35,,Est-ce que les lumières sont fonctionnelles lorsque l’extendeur 1 est changé et le Raspberry PI redemarré ?,72,73
-36,Titre 36,,Est-ce que les passages des clients sont affichés sur le logiciel ?,74,37
-37,Titre 37,,Est-ce que le logiciel est accessible ?,37,75
-38,Titre 38,,Est-ce que les lumières de tous les lecteurs sont allumées ?,76,77
-39,Diagnostic,,Aucun problème avec le système.,
-40,Diagnostic,,Erreur logique du logiciel - Envoi courriel,
-41,Diagnostic,,Probable erreur de lecture du code-à-barre - Envoi courriel,
-42,Diagnostic,,Erreur logique du logiciel : Code-à-barres différent dans COBA et dans le système de contrôle d'accèes - Envoi courriel,
-43,Diagnostic,,Refaire la carte du client,
-44,Diagnostic,,L'étudiant doit aller au Registrariat pour refaire sa carte,
-45,Diagnostic,,Possible problème de configuration des Raspberry pour envoyer la signal d’ouverture d’une porte – Envoi de courriel,
-46,Diagnostic,,Erreur de logique du logiciel : Aucune restriction d’accès valide et possible problème de configuration des Raspberry pour envoyer la signal d’ouverture d’une porte – Envoi de courriel – Envoi de courriel,
-47,Diagnostic,,Cas rare : Probable problème de communication avec Rapsberry Pi et/ou du serveur - Envoi courriel,
-48,Diagnostic,,Cas rare : Probable problème de communication entre le Raspberry Pi et la carte AS-1168 de la porte qui n'est pas affichée dans le système - Envoi courriel,
-49,Diagnostic,,Probable problème de communication entre le Raspberry Pi et les carte AS-1168 et/ou erreur de communication entre le logiciel et le Raspberry Pi - Envoi courriel,
-50,Diagnostic,,Probable problème de communication avec Rapsberry Pi et la carte AS-1168 - Envoi courriel,
-51,Diagnostic,,Possible problème de communication entre la boîte de jonction et la carte AS-1168,
-52,Diagnostic,,Possible problème de power supply et la carte du poteau du portillon AccesLane,
-53,Diagnostic,,Probable erreur de lecture du code-à-barre – Envoi de courriel,
-54,Diagnostic,,Erreur de logique du logiciel – Envoi de courriel,
-55,Diagnostic,,Refaire la carte du client,
-56,Diagnostic,,Problème avec sa carte étudiant - Veuillez rediriger l'étudiant au Registrariat a,FIN - de refaire sa carte,
-57,Diagnostic,,Aucun problème avec le système. La personne a une restriction d'accès valide,
-58,Diagnostic,,Erreur de logique du logiciel : Aucune restriction d’accès valide – Envoi de courriel,
-59,Diagnostic,,Erreur logique du système :Un abonnement et/ou activité valides en COBA, mais pas dans le système de contrôle d'accès - Envoi courriel,
-60,Diagnostic,,Aucun problème avec le système. La personne n'a pas un produit qui lui donne accès aux installations du Cepsum,
-61,Diagnostic,,Aucun problème avec le système. Le refus d'accès est valide,
-62,Diagnostic,,Erreur de logique du logiciel – Envoi de courriel,
-63,Diagnostic,,Problème de configuration su lecteur. Passer les codes de configuration aux lecteurs,
-64,Diagnostic,,Possible problème de lecture des codes. Passer les codes de configuration. Si le problème persiste, ouvrir un billet TI,
-65,Diagnostic,,Possible problème d’alimentation - Redémarrage du Raspberry et/ou des disjoncteurs nécessaires. Envoi de courriel,
-66,Diagnostic,,Problème de supply – Changement nécessaire de l’adapteur de 5 Volts.,
-67,Diagnostic,,Aucun problème avec le système. Le refus d'accès est valide,
-68,Diagnostic,,Changement de l’extender 2 et redemarrage du Raspberry Pi,
-69,Diagnostic,,Problème de configuration su lecteur. Passer les codes de configuration,
-70,Diagnostic,,Possible problème de configuration et d’alimentation - Redémarrage du Raspberry et/ou des disjoncteurs nécessaires. Envoi de courriel,
-71,Diagnostic,,Possible problème de configuration et de power supply – Réconfiguration des lecteurs et changement nécessaire de l’adapteur de 5 Volts.,
-72,Diagnostic,,Reconfiguration des lecteurs nécessaire.,
-73,Diagnostic,,Possible problème de configuration et électrique - Changement de l’extender 2 et redemarrage du Raspberry Pi,
-74,Diagnostic,,Lecteur fonctionnel. Probable problème de communication avec le Rapsberry Pi et la carte AS-6811 - Envoi courriel,
-75,Diagnostic,,Panne général - Redémarrage du serveur, des Raspberrys Pi et des disjoncteurs - Envoi courriel,
-76,Diagnostic,,Possible problème avec le Rapsberry - Redémarrage de celui-ci et/ou des disjoncteurs nécessaires. Envoi de courriel,
-77,Diagnostic,,Possible problème du power supply – Ouverture des tourniquets et vérification des connexions -. Envoi de courriel
+1,Ouverture de porte,,"Est-ce que la porte ouvre lorsque le client scan son code-à-barre ?",2,12
+2,Affichage passage,,"Est-ce que le passage est affiché sur le logiciel ?",3,10
+3,Passage autorise,,"Est-ce que le passage autorisé sur le logiciel",4,5
+4,Donnees participant,,"Est-ce que les informations du système de contrôle d’accès correspondent aux informations de COBA ?",39,40
+5,Refus cause par identifiant,,"Est-ce que le refus d'accès est concernant un identifiant ?",6,9
+6,Code-a-barres carte,,"Est-ce que le code-à-barres de la carte de l'étudiant est le même que dans COBA ?",7,8
+7,Informations logiciel,,"Est-ce que les informations du système de contrôle d’accès correspondent aux informations de COBA ?",41,42
+8,Statut participant,,"Est-ce que le client est membre du Cepsum ?",43,44
+9,Informations logiciel,,"Est-ce que les informations du système de contrôle d’accès correspondent aux informations de COBA ?",45,46
+10,Affichage passage,,"Est-ce que les passages des autres clients s'affichent sur le logiciel?",11,47
+11,Comportement portes,,"Est-ce que les autres portes réagissent correctement au comportement du logiciel ?",48,49
+12,Ouverture toutes les portes,,"Est-ce que les autres portes des tourniquets ouvrent?",13,36
+13,Affichage passage,,"Est-ce que le passage du client est affiché sur le logiciel ?",14,26
+14,Passage autorise,,"Est-ce que le passage est autorisé sur le logiciel ?",15,17
+15,Ouverture avec bouton,,"Est-ce que la porte ouvre après avoir cliqué sur le bouton d’ouverture manuelle au comptoir ?",50,16
+16,Ouverture portillon,,"Est-ce que le portillon de côté ouvre après avoir cliqué sur le bouton d’ouverture manuelle au comptoir ?",51,52
+17,Refus cause par identifiant,,"Est-ce que le refus d'accès est concernant un identifiant ?",18,21
+18,Code-a-barres carte,,"Est-ce que le code-à-barres de la carte de l'étudiant est le même que dans COBA ?",19,20
+19,Informations logiciel,,"Est-ce que les informations du système de contrôle d’accès correspondent aux informations de COBA ?",53,54
+20,Statut participant,,"Est-ce que le client est membre du Cepsum ?",55,56
+21,Refus cause par restriction,,"Est-ce que le refus d'accès est causé par une restriction dans le dossier ?",22,23
+22,Restriction active COBA,,"Est-ce que la restriction d'accès est aussi active dans COBA ?",57,58
+23,Refus cause par produit,,"Est-ce que le refus d'accès est causé par le manque d'une activité et/ou abonnement en cours dans son dossier ?",24,25
+24,Produit dans COBA,,"Est-ce que la personne a un abonnement et/ou une activité valide dans COBA?",59,60
+25,Refus d'acces valide,,"Est-ce que la raison du refus dans le système de contrôle d'accès est valide ?",61,62
+26,Lecture code-a-barres,,"Est-ce que le code-à-barre est lu par le lecteur sur le comptoir et affiché sur le logiciel ?",27,63
+27,Son lecteur,,"Est-ce que le lecteur émet un son lorsqu’un code-à-barre est lu ?",28,32
+28,Lumiere lecteur,,"Est-ce que la lumière du lecteur est allumée ?",64,29
+29,Lumieres tous les lecteurs,,"Est-ce que les lumières des autres lecteurs sont allumées ?",65,30
+30,5 Volts,,"Ouvrir le tourniquet. Est-ce que l’écran qui montre qu’il y a 5 volts s’affiche ?",66,31
+31,Extendeur 1,,"Est-ce que les lumières sont fonctionnelles lorsque l’extendeur 1 est changé et le Raspberry PI redemarré ?",67,68
+32,Lumiere lecteur,,"Est-ce que la lumière du lecteur est allumée ?",69,33
+33,Lumieres tous les lecteurs,,"Est-ce que les lumières des autres lecteurs sont allumées ?",70,34
+34,5 Volts,,"Ouvrir le tourniquet. Est-ce que l’écran qui montre qu’il y a 5 volts s’affiche ?",71,35
+35,Extendeur 1,,"Est-ce que les lumières sont fonctionnelles lorsque l’extendeur 1 est changé et le Raspberry PI redemarré ?",72,73
+36,Affichage passage,,"Est-ce que les passages des clients sont affichés sur le logiciel ?",74,37
+37,Accessibilite logiciel,,"Est-ce que le logiciel est accessible ?",37,75
+38,Lumieres tous les lecteurs,,"Est-ce que les lumières de tous les lecteurs sont allumées ?",76,77
+39,Diagnostic,"","Aucun problème avec le système.",,
+40,Diagnostic,"","Erreur logique du logiciel - Envoi courriel",,
+41,Diagnostic,"","Probable erreur de lecture du code-à-barre - Envoi courriel",,
+42,Diagnostic,"","Erreur logique du logiciel : Code-à-barres différent dans COBA et dans le système de contrôle d'accèes - Envoi courriel",,
+43,Diagnostic,"","Refaire la carte du client",,
+44,Diagnostic,"","L'étudiant doit aller au Registrariat pour refaire sa carte",,
+45,Diagnostic,"","Possible problème de configuration des Raspberry pour envoyer la signal d’ouverture d’une porte – Envoi de courriel",,
+46,Diagnostic,"","Erreur de logique du logiciel : Aucune restriction d’accès valide et possible problème de configuration des Raspberry pour envoyer la signal d’ouverture d’une porte – Envoi de courriel – Envoi de courriel",,
+47,Diagnostic,"","Cas rare : Probable problème de communication avec Rapsberry Pi et/ou du serveur - Envoi courriel",,
+48,Diagnostic,"","Cas rare : Probable problème de communication entre le Raspberry Pi et la carte AS-1168 de la porte qui n'est pas affichée dans le système - Envoi courriel",,
+49,Diagnostic,"","Probable problème de communication entre le Raspberry Pi et les carte AS-1168 et/ou erreur de communication entre le logiciel et le Raspberry Pi - Envoi courriel",,
+50,Diagnostic,"","Probable problème de communication avec Rapsberry Pi et la carte AS-1168 - Envoi courriel",,
+51,Diagnostic,"","Possible problème de communication entre la boîte de jonction et la carte AS-1168",,
+52,Diagnostic,"","Possible problème de power supply et la carte du poteau du portillon AccesLane",,
+53,Diagnostic,"","Probable erreur de lecture du code-à-barre – Envoi de courriel",,
+54,Diagnostic,"","Erreur de logique du logiciel – Envoi de courriel",,
+55,Diagnostic,"","Refaire la carte du client",,
+56,Diagnostic,"","Problème avec sa carte étudiant - Veuillez rediriger l'étudiant au Registrariat afin de refaire sa carte",,
+57,Diagnostic,"","Aucun problème avec le système. La personne a une restriction d'accès valide",,
+58,Diagnostic,"","Erreur de logique du logiciel : Aucune restriction d’accès valide – Envoi de courriel",,
+59,Diagnostic,"","Erreur logique du système :Un abonnement et/ou activité valides en COBA, mais pas dans le système de contrôle d'accès - Envoi courriel",,
+60,Diagnostic,"","Aucun problème avec le système. La personne n'a pas un produit qui lui donne accès aux installations du Cepsum",,
+61,Diagnostic,"","Aucun problème avec le système. Le refus d'accès est valide",,
+62,Diagnostic,"","Erreur de logique du logiciel – Envoi de courriel",,
+63,Diagnostic,"","Problème de configuration su lecteur. Passer les codes de configuration aux lecteurs",,
+64,Diagnostic,"","Possible problème de lecture des codes. Passer les codes de configuration. Si le problème persiste, ouvrir un billet TI",,
+65,Diagnostic,"","Possible problème d’alimentation - Redémarrage du Raspberry et/ou des disjoncteurs nécessaires. Envoi de courriel",,
+66,Diagnostic,"","Problème de supply – Changement nécessaire de l’adapteur de 5 Volts",,
+67,Diagnostic,"","Aucun problème avec le système. Le refus d'accès est valide",,
+68,Diagnostic,"","Changement de l’extender 2 et redemarrage du Raspberry Pi",,
+69,Diagnostic,"","Problème de configuration su lecteur. Passer les codes de configuration",,
+70,Diagnostic,"","Possible problème de configuration et d’alimentation - Redémarrage du Raspberry et/ou des disjoncteurs nécessaires. Envoi de courriel",,
+71,Diagnostic,"","Possible problème de configuration et de power supply – Réconfiguration des lecteurs et changement nécessaire de l’adapteur de 5 Volts",,
+72,Diagnostic,"","Reconfiguration des lecteurs nécessaire",,
+73,Diagnostic,"","Possible problème de configuration et électrique - Changement de l’extender 2 et redemarrage du Raspberry Pi",,
+74,Diagnostic,"","Lecteur fonctionnel. Probable problème de communication avec le Rapsberry Pi et la carte AS-6811 - Envoi courriel",,
+75,Diagnostic,"","Panne général - Redémarrage du serveur, des Raspberrys Pi et des disjoncteurs - Envoi courriel",,
+76,Diagnostic,"","Possible problème avec le Rapsberry - Redémarrage de celui-ci et/ou des disjoncteurs nécessaires. Envoi de courriel",,
+77,Diagnostic,"","Possible problème du power supply – Ouverture des tourniquets et vérification des connexions -. Envoi de courriel",,
+78,Ouverture portes au poste,,"Est-ce que toutes les portes ouvrent après avoir appuyé sur le bouton d’ouverture manuelle d’un poste ?",79,80
+79,Boutons fonctionnels partout,,"Est-ce que tous les boutons sont fonctionnels dans tous les postes ?",84,85
+80,Boutons fonctionnels ailleur,,"Est-ce que tous les boutons sont fonctionnels dans les autres postes ?",86,81
+81,Bouton portillon latéral,,"Est-ce que le bouton d’ouverture du portillon latéral fonctionne ?",82,83
+82,Bouton portes tourniquets,,"Est-ce que l’ouverture de la porte 1 ou de la porte 2 fonctionnent ?",87,88
+83,Bouton portes tourniquets,,"Est-ce que l’ouverture de la porte 1 ou de la porte 2 fonctionnent ?",89,90
+84,Diagnostic,,"Aucun problème avec le système",,
+85,Diagnostic,,"Câblage défectueux dans un ou plusieurs postes – Envoi de courriel",,
+86,Diagnostic,,"Câblage défectueux du poste en question – Envoi de courriel",,
+87,Diagnostic,,"Communication entre le Rapsberry Pi et la boîte de jonction – Envoi de courrie",,
+88,Diagnostic,,"Communication entre la carte AS-6811 et la boîte de jonction – Envoi de courriel",,
+89,Diagnostic,,"Communication entre la carte du portillon et la boîte de jonction – Envoi de courriel",,
+90,Diagnostic,,"Câblage défectueux dans la boîte de jonction. Besoin de reconfigurer les connexions – Envoi de courriel",,
+91,Affichage logiciel,,"Est-ce que le logiciel s’affiche sur l’écran ?",92,120
+92,Login,,"Est-ce que le login est possible dans le logiciel ?",93,104
+93,Fonctionnalites,,"Est-ce que toutes les fonctionnalités du logiciel marchent correctement ?",94,117
+94,Passages,,"Est-ce que les passages des clients s’affichent sur l’écran ?",95,97
+95,Photos,,"Est-ce que les photos des clients s’affichent sur l’écran ?",96,108
+96,Donnees,,"Est-ce que les données du logiciel correspondent aux données de COBA ?",106,107
+97,Traverser tourniquets,,"Est-ce que les clients peuvent traverser les tourniquets ?",109,98
+98,Ouverture portes bouton logiciel,,"Est-ce que les portes ouvrent après avoir cliqué sur le bouton d’ouverture manuelle sur l’écran du logiciel ?",99,101
+99,Son lecteur,,"Est-ce que le lecteur émet un son après avoir scanné une carte ?",110,100
+100,Lumiere lecteur,,"Est-ce que la lumière du lecteur est fonctionnelle ?",111,112
+101,Ouverture portes bouton physique,,"Est-ce que les portes ouvrent après avoir cliqué sur le bouton d’ouverture manuelle physique (au poste de travail)?",113,102
+102,Son lecteur,,"Est-ce que le lecteur émet un son après avoir scanné une carte ?",114,103
+103,Lumiere lecteur,,"Est-ce que la lumière du lecteur est fonctionnelle ?",115,116
+104,Raccourci bureau,,"Est-ce que le raccourci bureau est fonctionnel ?",118,119
+105,Configuration raccourci,,"Est-ce que le raccourci bureau pour le login est disponible et bien configuré sur le bureau ?",,
+106,Diagnostic,,"Aucun problème avec le système",,
+107,Diagnostic,,"Erreur des données de SAGA – Envoi de courriel",,
+108,Diagnostic,,"Erreur de communication avec le serveur de Security Center ou de FluxID – Envoi de courriel",,
+109,Diagnostic,,"Possible erreur de communication avec le Raspberry – Envoi de courriel",,
+110,Diagnostic,,"Possible erreur de communication Entre le Raspberry Pi et le logiciel – Envoi de courriel",,
+111,Diagnostic,,"Problème de configuration su lecteur. Passer les codes de configuration – Si cela ne marche pas, envoi de courriel",,
+112,Diagnostic,,"Possible problème de configuration et d’alimentation - Redémarrage du Raspberry et/ou des disjoncteurs nécessaires. Envoi de courriel",,
+113,Diagnostic,,"Possible erreur de communication Entre le Raspberry Pi et le logiciel – Envoi de courriel",,
+114,Diagnostic,,"Possible erreur du Raspberry – Envoi de courriel",,
+115,Diagnostic,,"Possible erreur du Raspberry – Envoi de courriel",,
+116,Diagnostic,,"Panne majeur. Possible problème d’alimentation, du serveur, des cartes et des Raspberrys Pi – Envoi de courriel",,
+117,Diagnostic,,"Indiquer la fonctionnalité non disponible et/ou défectueux – Envoi de courriel",,
+118,Diagnostic,,"Possible problème avec le service d’authentification et le logiciel – Envoi de courriel",,
+119,Diagnostic,,"Configuration du login nécessaire et vérification du service d’authéntification – Envoi de courriel",,
+120,Diagnostic,,"Indiquer le type d’erreur qui s’affiche sur l’écran et contacter l’équipe de support. Possible erreur du pare-feu ou du serveur – Envoi de courriel",,

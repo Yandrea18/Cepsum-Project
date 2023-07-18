@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import "./Login.css";
 
 const Login = ({ onLogin }) => {
-  //function Login({ onLogin }) {
+  // État pour stocker le nom d'utilisateur
   const [username, setUsername] = useState("");
+  // État pour stocker le mot de passe
   const [password, setPassword] = useState("");
+  // État pour afficher ou masquer le mot de passe
   const [showPassword, setShowPassword] = useState(false);
+  // État pour indiquer si la case "Se souvenir de moi" est cochée
   const [rememberMe, setRememberMe] = useState(false);
 
+  // Gérer la connexion
   const handleLogin = () => {
     onLogin();
   };

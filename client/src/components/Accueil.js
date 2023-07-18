@@ -2,17 +2,20 @@ import React from "react";
 import { Grid, Typography } from "@mui/material";
 import "./Accueil.css";
 
-const Accueil = ({ onDiagnostic }) => {
+const Accueil = ({ onDiagnostic, onBoutons, onLogiciel }) => {
+  // Fonction pour afficher une alerte lorsqu'un élément est en construction
+  const onConstruction = () => {
+    alert("Le site est actuellement en construction.");
+  };
+
   return (
     <div>
       <h1 className="h1">Application de diagnostic</h1>
       <div className="accueil-container">
         <Grid container spacing={3}>
+          {/* Composant pour les problèmes d'accès */}
           <Grid item xs={6} sm={6}>
-            <div
-              className="accueil-custom-component"
-              onClick={() => onDiagnostic()}
-            >
+            <div className="accueil-custom-component" onClick={onDiagnostic}>
               <img
                 src="/images/tourniquets.png"
                 alt="Problèmes d'accès"
@@ -21,8 +24,9 @@ const Accueil = ({ onDiagnostic }) => {
               <Typography variant="h6">Problèmes d'accès</Typography>
             </div>
           </Grid>
+          {/* Composant pour l'accessibilité et les erreurs de fonctionnement du logiciel */}
           <Grid item xs={6} sm={6}>
-            <div className="accueil-custom-component">
+            <div className="accueil-custom-component" onClick={onLogiciel}>
               <img
                 src="/images/logiciel.png"
                 alt="Accessibilité"
@@ -33,8 +37,9 @@ const Accueil = ({ onDiagnostic }) => {
               </Typography>
             </div>
           </Grid>
+          {/* Composant pour le fonctionnement des boutons d'ouverture des portes */}
           <Grid item xs={6} sm={6}>
-            <div className="accueil-custom-component">
+            <div className="accueil-custom-component" onClick={onBoutons}>
               <img
                 src="/images/boutons1.png"
                 alt="Boutons de portes"
@@ -45,8 +50,9 @@ const Accueil = ({ onDiagnostic }) => {
               </Typography>
             </div>
           </Grid>
+          {/* Composant pour l'outil d'auto-diagnostic */}
           <Grid item xs={6} sm={6}>
-            <div className="accueil-custom-component">
+            <div className="accueil-custom-component" onClick={onConstruction}>
               <img
                 src="/images/autotest.png"
                 alt="Autodiagnostic"

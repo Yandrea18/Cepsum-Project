@@ -6,7 +6,6 @@ import {
   DialogActions,
   TextField,
   Button,
-  Chip,
   FormControl,
   InputLabel,
   Select,
@@ -15,9 +14,13 @@ import {
 import EmailIcon from "@mui/icons-material/Email";
 
 const EmailSender = ({ currentQuestion, questionHistory, onSendEmail }) => {
+  // État pour gérer l'ouverture ou la fermeture de la boîte de dialogue d'envoi d'e-mail
   const [open, setOpen] = useState(false);
+  // État pour stocker le nom du destinataire
   const [name, setName] = useState("");
+  // État pour stocker les adresses e-mail en copie
   const [ccEmails, setCCEmails] = useState([]);
+  // État pour stocker le contenu du message
   const [message, setMessage] = useState("");
   const defaultEmail = "emily.caceres@umontreal.ca";
   const emailOptions = [
@@ -27,19 +30,23 @@ const EmailSender = ({ currentQuestion, questionHistory, onSendEmail }) => {
     "example4@example.com",
   ];
 
+  // Gérer l'ouverture de la boîte de dialogue
   const handleOpen = () => {
     setOpen(true);
   };
 
+  // Gérer la fermeture de la boîte de dialogue
   const handleClose = () => {
     setOpen(false);
   };
 
+  // Gérer la sélection des adresses e-mail en copie
   const handleSelectCC = (event) => {
     const selectedEmails = event.target.value;
     setCCEmails(selectedEmails);
   };
 
+  // Gérer la soumission du formulaire d'envoi d'e-mail
   const handleSubmit = (event) => {
     event.preventDefault();
     let fullMessage = message;
