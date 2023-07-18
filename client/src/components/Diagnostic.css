@@ -37,8 +37,8 @@
   }
 }
 @font-face {
-  font-family: 'Prohibition';
-  src: url("../public/fonts/ProhibitionTest-Round.otf") format('truetype'); 
+  font-family: "Prohibition";
+  src: url("../../public/fonts/ProhibitionTest-Round.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -60,12 +60,11 @@
 }
 
 .logo-container {
-  margin-left: 10px;
-  margin-top: 10px;
+  /* margin-left: 10px;
+  margin-top: 10px; */
   width: 100%;
   max-width: 250px;
 }
-
 
 .logo {
   width: 100%;
@@ -73,9 +72,8 @@
   max-height: 100px;
 }
 
-
 .content-container {
-  margin-top: 70px; 
+  margin-top: 70px;
 }
 
 .button-container {
@@ -106,4 +104,3 @@
   background-color: #798093;
   color: #ffffff;
 }
-

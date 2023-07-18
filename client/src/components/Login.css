@@ -1,0 +1,64 @@
+.login-container {
+  background-image: linear-gradient(to bottom right, #0f192c, #0060ac);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  /* margin-bottom: 300px; */
+}
+
+.logoC {
+  width: 150px; /* Ajusta el tamaño del logo según tus necesidades */
+  height: auto;
+}
+.line {
+  height: 2px;
+  background-color: #798093;
+  margin: 20px 0; /* Ajusta el margen superior e inferior según tus necesidades */
+}
+.login-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.login-button {
+  background-color: #798093;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}

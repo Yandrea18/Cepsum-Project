@@ -1,27 +1,26 @@
-
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import HomeIcon from "@mui/icons-material/Home";
 import {
   Breadcrumbs,
   Button,
   CircularProgress,
   Collapse,
+  Icon,
   Link,
   Paper,
   Typography,
 } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import "./App.css";
-import EmailSender from "./EmailSender";
+import "./Diagnostic.css";
+import EmailSender from "../components/EmailSender";
 
-
-const App = () => {
+const Diagnostic = ({ onDiagnostic }) => {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [selectedQuestion, setSelectedQuestion] = useState(1);
   const [questionHistory, setQuestionHistory] = useState([]);
   const [loading, setLoading] = useState(true);
-const [openEmailForm, setOpenEmailForm] = useState(false);
-
+  const [openEmailForm, setOpenEmailForm] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -70,6 +69,8 @@ const [openEmailForm, setOpenEmailForm] = useState(false);
   const handleSendEmail = () => {
     setOpenEmailForm(true);
     console.log("Enviar correo");
+    //Valider que le courriel est bien envoye
+    onDiagnostic();
   };
 
   return (
@@ -78,9 +79,25 @@ const [openEmailForm, setOpenEmailForm] = useState(false);
         <CircularProgress />
       ) : currentQuestion ? (
         <Paper className="paper">
-          <div className="logo-container">
-            <img src="/images/LogoCepsum.jpg" alt="Logo" className="logo" />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignContent: "center",
+            }}
+          >
+            <div className="logo-container">
+              <img src="/images/LogoCepsum.jpg" alt="Logo" className="logo" />
+            </div>
+            <div style={{ alignSelf: "center" }}>
+              <HomeIcon
+                fontSize="large"
+                style={{ color: "#0060AC", cursor: "pointer" }}
+                onClick={onDiagnostic}
+              />
+            </div>
           </div>
+
           <Collapse in={questionHistory.length > 0}>
             <Link
               underline="hover"
@@ -185,4 +202,4 @@ const [openEmailForm, setOpenEmailForm] = useState(false);
   );
 };
 
-export default App;
+export default Diagnostic;
