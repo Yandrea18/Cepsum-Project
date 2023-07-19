@@ -22,12 +22,12 @@ const EmailSender = ({ currentQuestion, questionHistory, onSendEmail }) => {
   const [ccEmails, setCCEmails] = useState([]);
   // État pour stocker le contenu du message
   const [message, setMessage] = useState("");
-  const defaultEmail = "emily.caceres@umontreal.ca";
+  const defaultEmail = "support@cepsum.umontreal.ca";
   const emailOptions = [
-    "example1@example.com",
-    "example2@example.com",
-    "example3@example.com",
-    "example4@example.com",
+    "gabriel.tran@umontreal.ca",
+    "marc.st-pierre.2@umontreal.ca",
+    "emily.caceres@umontreal.ca",
+    "en.feng.wu@umontreal.ca",
   ];
 
   // Gérer l'ouverture de la boîte de dialogue

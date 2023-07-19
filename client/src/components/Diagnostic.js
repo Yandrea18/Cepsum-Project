@@ -181,7 +181,7 @@ const Diagnostic = ({ onDiagnostic }) => {
               </button>
             </div>
           )}
-          {currentQuestion.message.includes("Envoi courriel") && (
+          {currentQuestion.message.includes("courriel") && (
             <EmailSender
               currentQuestion={currentQuestion}
               questionHistory={questionHistory}

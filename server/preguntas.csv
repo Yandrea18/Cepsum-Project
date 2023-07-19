@@ -1,5 +1,5 @@
 id,titre,image,message,oui,non
-1,Ouverture de porte,,"Est-ce que la porte ouvre lorsque le client scan son code-à-barre ?",2,12
+1,Ouverture de porte,"scan2.jpeg","Est-ce que la porte ouvre lorsque le client scan son code-à-barre ?",2,12
 2,Affichage passage,,"Est-ce que le passage est affiché sur le logiciel ?",3,10
 3,Passage autorise,,"Est-ce que le passage autorisé sur le logiciel",4,5
 4,Donnees participant,,"Est-ce que les informations du système de contrôle d’accès correspondent aux informations de COBA ?",39,40
@@ -10,7 +10,7 @@ id,titre,image,message,oui,non
 9,Informations logiciel,,"Est-ce que les informations du système de contrôle d’accès correspondent aux informations de COBA ?",45,46
 10,Affichage passage,,"Est-ce que les passages des autres clients s'affichent sur le logiciel?",11,47
 11,Comportement portes,,"Est-ce que les autres portes réagissent correctement au comportement du logiciel ?",48,49
-12,Ouverture toutes les portes,,"Est-ce que les autres portes des tourniquets ouvrent?",13,36
+12,Ouverture toutes les portes,"portes.jpg","Est-ce que les autres portes des tourniquets ouvrent?",13,36
 13,Affichage passage,,"Est-ce que le passage du client est affiché sur le logiciel ?",14,26
 14,Passage autorise,,"Est-ce que le passage est autorisé sur le logiciel ?",15,17
 15,Ouverture avec bouton,,"Est-ce que la porte ouvre après avoir cliqué sur le bouton d’ouverture manuelle au comptoir ?",50,16
@@ -34,9 +34,9 @@ id,titre,image,message,oui,non
 33,Lumieres tous les lecteurs,,"Est-ce que les lumières des autres lecteurs sont allumées ?",70,34
 34,5 Volts,,"Ouvrir le tourniquet. Est-ce que l’écran qui montre qu’il y a 5 volts s’affiche ?",71,35
 35,Extendeur 1,,"Est-ce que les lumières sont fonctionnelles lorsque l’extendeur 1 est changé et le Raspberry PI redemarré ?",72,73
-36,Affichage passage,,"Est-ce que les passages des clients sont affichés sur le logiciel ?",74,37
-37,Accessibilite logiciel,,"Est-ce que le logiciel est accessible ?",37,75
-38,Lumieres tous les lecteurs,,"Est-ce que les lumières de tous les lecteurs sont allumées ?",76,77
+36,Affichage passage,"logiciel1.png","Est-ce que les passages des clients sont affichés sur le logiciel ?",74,37
+37,Accessibilite logiciel,"login.png","Est-ce que le logiciel est accessible ?",38,75
+38,Lumieres tous les lecteurs,"lumieres.png","Est-ce que les lumières de tous les lecteurs sont allumées ?",76,77
 39,Diagnostic,"","Aucun problème avec le système.",,
 40,Diagnostic,"","Erreur logique du logiciel - Envoi courriel",,
 41,Diagnostic,"","Probable erreur de lecture du code-à-barre - Envoi courriel",,
@@ -89,9 +89,9 @@ id,titre,image,message,oui,non
 88,Diagnostic,,"Communication entre la carte AS-6811 et la boîte de jonction – Envoi de courriel",,
 89,Diagnostic,,"Communication entre la carte du portillon et la boîte de jonction – Envoi de courriel",,
 90,Diagnostic,,"Câblage défectueux dans la boîte de jonction. Besoin de reconfigurer les connexions – Envoi de courriel",,
-91,Affichage logiciel,,"Est-ce que le logiciel s’affiche sur l’écran ?",92,120
-92,Login,,"Est-ce que le login est possible dans le logiciel ?",93,104
-93,Fonctionnalites,,"Est-ce que toutes les fonctionnalités du logiciel marchent correctement ?",94,117
+91,Affichage logiciel,"login.png","Est-ce que le logiciel s’affiche sur l’écran ?",92,120
+92,Login,"onlogin.png","Est-ce que le login est possible dans le logiciel ?",93,104
+93,Fonctionnalites,"Fonctionnalites.png","Est-ce que toutes les fonctionnalités du logiciel marchent correctement ?",94,117
 94,Passages,,"Est-ce que les passages des clients s’affichent sur l’écran ?",95,97
 95,Photos,,"Est-ce que les photos des clients s’affichent sur l’écran ?",96,108
 96,Donnees,,"Est-ce que les données du logiciel correspondent aux données de COBA ?",106,107
